@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Clase de utilidad para ocultar contenido visualmente, 
+pero mantenerlo accesible para lectores de pantalla y SEO.
+*/
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+body {
+    display: flex;
+    width: 100dvw;
+    min-height: 100dvh;
+    flex-flow: column nowrap;
+    padding: 10px clamp(10px, 3vw, 50px);
+    align-items: center;
+    background-image: url(imagenes/fondo_body.jpg);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    justify-content: space-between;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__logo {
+    width: clamp(120px, 15vw, 150px);
+}
+
+.header__nav-list,
+.hero__metadata-list {
+    list-style: none;
+    display: flex;
+}
+
+.header__nav-list {
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.header__nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
+
+.header__search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    margin-top: 10px;
+    padding: 5px 5px;
+    width: clamp(150px, 100%, 350px);
+    border: #fafafa7a 2px solid;
+    border-radius: 5px;
+}
+
+.material-icons {
+    color: #fafafa9a;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.header__search-input {
+    width: clamp(100px, 80%, 300px);
+    background: transparent;
+    border: none;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.header__search-input::placeholder {
+    color: #fafafa9a;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    letter-spacing: 1px;
+}
+
+.header__search-input:focus {
+    outline: none;
+    color: #fff;
+}
+
+.hero {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.hero__content {
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+.hero__show-info {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero__show-brand {
+    width: 30px;
+}
+
+.hero__show-category {
+    font-weight: 400;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+}
+
+.hero__show-img {
+    width: 100%;
+}
+
+.hero__img {
+    width: 100%;
+}
+
+.hero__metadata-list {
+    gap: 25px;
+    font-size: 0.95rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hero__metadata-item {
+    position: relative;
+    color: #fffd;
+    text-align: center;
+}
+
+.hero__metadata-item::after {
+    content: '';
+    position: absolute;
+    height: 80%;
+    width: 1px;
+    background-color: #afafaf;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -10px;
+}
+
+.hero__metadata-item:last-child::after {
+    opacity: 0;
+}
+
+.hero__metadata-item:nth-child(2) {
+    padding: 2px 5px;
+    background-color: #f00;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+.hero__description {
+    width: 100%;
+    overflow-wrap: break-word;
+    text-align: left;
+    line-height: 1.2;
+    font-size: 1.1rem;
+}
+
+.hero__actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.hero__button {
+    width: 90px;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background: transparent;
+    color: #fff;
+}
+
+.hero__button--secondary {
+    border: #fafafa33 2px solid;
+}
+
+.hero__button--primary {
+    background-color: #f00;
+    border: none;
+}
+
+/*Hovers*/
+.header__nav-link:hover,
+.header__nav-link:focus-visible {
+    color: #f00; /* O un ligero subrayado */
+    transition: color 0.3s ease;
+}
+
+.hero__button:hover,
+.hero__button:focus-visible {
+    filter: brightness(85%); /* Oscurece un poco el botón */
+    transition: filter 0.3s ease;
+}
+
+/*Media queris header*/
+@media (min-width: 748px) {
+    .header {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .header__search {
+        width: clamp(150px, 20vw, 850px);
+    }
+
+    .header__search-input {
+        width: clamp(100px, 80%, 800px);
+    }
+
+    .header__nav {
+        margin: 0 10px 0 5px;
+    }
+}
+
+@media (min-width: 600px) {
+    .hero {
+        width: clamp(550px, 50%, 748px);
+        align-self: flex-start;
+    }
+}
+
