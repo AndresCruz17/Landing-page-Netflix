@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Co</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagenes/logo_netflix.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <img class="header__logo" src="imagenes/Logo_completo-Netflix.png" alt="Logo completo de Netflix">
+
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Home</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">TV Shows</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Movies</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Latest</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">My List</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__search">
+            <span class="material-icons">search</span>
+            <input class="header__search-input" type="search" placeholder="Search">
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="hero__content">
+            <div class="hero__show-info">
+                <img class="hero__show-brand" src="imagenes/logo_netflix.png" alt="logo netflix">
+                <span class="hero__show-category">SERIE</span>
+            </div>
+            <h1 class="hero__title visually-hidden">Peaky Blinders</h1>
+            <div class="hero__show-img">
+                <img class="hero__img" src="imagenes/logo_peaky_white.png" alt="Logo peaky blinders">
+            </div>
+            <ul class="hero__metadata-list">
+                <li class="hero__metadata-item">2022</li>
+                <li class="hero__metadata-item">16+</li>
+                <li class="hero__metadata-item">6 Temporadas</li>
+                <li class="hero__metadata-item">Serie</li>
+            </ul>
+
+            <p class="hero__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi minus laudantium perspiciatis?
+                Perferendis, ipsum! Tempora dicta non, labore maiores atque vel officia inventore ipsam repellat
+                adipisci voluptas voluptatem asperiores vitae.
+            </p>
+
+            <div class="hero__actions">
+                <button class="hero__button hero__button--primary">PLAY</button>
+                <button class="hero__button hero__button--secondary">MY LIST</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
